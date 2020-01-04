@@ -1,0 +1,27 @@
+{
+  "name": "static-testing-starter",
+  "private": true,
+  "author": "Andrew Zheng (https://www.andrew-zheng.com/)",
+  "license": "GPLv3",
+  "scripts": {
+    "build": "babel src --extensions .js,.ts,.tsx --out-dir dist",
+    "lint": "eslint --ext .js,.ts,tsx .",
+    "prettier": "prettier \"**/*.+(js|json|ts|tsx)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different",
+    "check-type": "tsc",
+    "validate": "npm run check-type && npm run check-format && npm run lint && npm run build"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.0",
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.7",
+    "@typescript-eslint/eslint-plugin": "^2.14.0",
+    "@typescript-eslint/parser": "^2.14.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.4"
+  }
+}
